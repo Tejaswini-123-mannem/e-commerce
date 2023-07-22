@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- swiper -->
+  <script src="https://kit.fontawesome.com/545d810ec9.js" crossorigin="anonymous"></script>
+  <script src=" bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All products</title>
+  <style>
+    .containera {
+      max-width: 1300px;
+      width: 100%;
+      padding: 10px 0;
+      min-height: 50vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 25px;
+      margin: 0 2px;
+     
+    }
+    .image-content,
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2px 2px;
+    }
+
+    .image-content {
+      position: relative;
+      row-gap: 2px;
+      padding: 9px 0;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgb(116, 115, 115);
+      border-radius: 0 0 0 25px;
+    }
+
+    .overlay::before,
+    .overlay::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      height: 40px;
+      width: 40px;
+      background-color: rgb(116, 115, 115);
+    }
+
+    .overlay::after {
+      border-radius: 0 10px 0 0;
+      background-color: #FFF;
+    }
+
+    .card-image {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      padding: 3px;
+    }
+
+    .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border: 4px solid rgb(116, 115, 115);
+    }
+
+    .name {
+      font-size: 15px;
+      font-weight:600;
+      color: rgb(116, 115, 115);
+    }
+
+    .description {
+      font-size: 14px;
+      color: rgb(116, 115, 115);
+      text-align: center;
+    }
+
+    .button {
+      font-size: 16px;
+      padding: 6px 8px;
+      background-color: rgb(6, 102, 102);
+      border-radius: 6px;
+      margin: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: rgb(6, 102, 102);
+    }
+    .card:hover{
+      z-index: 1;
+      box-shadow: 0 8px 50px rgba(0,0,0,0,2);
+      transform: scale(1.1);
+    }
+  </style>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <h1 style="text-align:center;">ALL PRODUCTS</h1>
+ 
+  <h3 style="text-align:center;">WOMEN(DRESS)</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(cotton dress).webp" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">cottondress</h2>
+            <p>$15</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="women(guestdress).jpg" alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">guestdress</h2>
+              <p>$20</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(party dress).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">partydress</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(summer dress).jpeg" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">summerdress</h2>
+          <p>$16</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card ">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="women(black dress).jpg" alt="" class="card-img">
+        </div>
+    </div>
+
+    <div class="card-content">
+        <h2 class="name">blackdress</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="women(prom gown).jpg" alt="" class="card-img">
+      </div>
+  </div>
+
+  <div class="card-content">
+      <h2 class="name">prom gown</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <h3 style="text-align: center;">SKIRTS</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women-skirt-1.jpeg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">red skirt</h2>
+            <p>$15</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="womens-skirt-2.jpeg" alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">skirt</h2>
+              <p>$20</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(pencilskirt).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">pencilskirt</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(long skirt).avif" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">longskirt</h2>
+          <p>$16</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card ">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="women(chiffon skirt).webp" alt="" class="card-img">
+        </div>
+    </div>
+
+    <div class="card-content">
+        <h2 class="name">chiffonskirt</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="women(denim skirt).jpg" alt="" class="card-img">
+      </div>
+  </div>
+
+  <div class="card-content">
+      <h2 class="name">deminskirt</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <h3 style="text-align:center;">WOMEN(PANTS)</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(straight leg pant).jpeg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">straightpant</h2>
+            <p>$19</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="women(linen trousers).webp " alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">linentrousers</h2>
+              <p>$19</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="women(linen cotton pant).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">cottonpant</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="womens(basic dress pants).jpeg" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">dresspant</h2>
+          <p>$16</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card ">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="women(twill pant).jpeg" alt="" class="card-img">
+        </div>
+    </div>
+
+    <div class="card-content">
+        <h2 class="name">twillpant</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="womens(pleatedpant).jpg" alt="" class="card-img">
+      </div>
+  </div>
+
+  <div class="card-content">
+      <h2 class="name">pleatedpant</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <h3 style="text-align:center;">MEN(SHIRTS)</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(denimshirt).jpeg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">deminshirt</h2>
+            <p>$25</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="men(redshirt).jpeg" alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">redshirt</h2>
+              <p>$20</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(collar shirt).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">collarshirt</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(solid shirt).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">solidshirt</h2>
+          <p>$18</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="men(slik shirt).webp" alt="" class="card-img">
+        </div>
+    </div>
+    <div class="card-content">
+        <h2 class="name">slikshirt</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="men(causual t-shirt).jpg" alt="" class="card-img">
+      </div>
+  </div>
+  <div class="card-content">
+      <h2 class="name">causualt-shirt</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <h3 style="text-align:center;">MEN(HODDIES)</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(zipperhoodie).jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">zipperhoodie</h2>
+            <p>$25</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="men(gillethoodie).jpeg" alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">gillethoodie</h2>
+              <p>$20</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(designer hoodie).jpeg" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">designerhoodie</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(casualhoodie).jpg" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">casualhoodie</h2>
+          <p>$16</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card ">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="men (long sleeve solid hoodie).jpeg" alt="" class="card-img">
+        </div>
+    </div>
+
+    <div class="card-content">
+        <h2 class="name">greyhoodie</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="mens(zip-up hoodie).webp" alt="" class="card-img">
+      </div>
+  </div>
+
+  <div class="card-content">
+      <h2 class="name">zip-hoodie</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <h3 style="text-align:center;">MEN(PANTS)</h3>
+  <div class="container containera">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(elastic stiky pant).webp" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">stickypant</h2>
+            <p>$15</p>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+    
+              <div class="card-image">
+                  <img src="men(checkpant).jpg" alt="" class="card-img">
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h2 class="name">checkspant</h2>
+              <p>$20</p>
+              <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+              <button class="button">  <i class="fa-solid fa-cart-plus"  ></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(navypant).webp" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">navypant</h2>
+          <p>$22</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card ">
+
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="men(ytrackpant).jpeg" alt="" class="card-img">
+          </div>
+      </div>
+
+      <div class="card-content">
+          <h2 class="name">trackpant</h2>
+          <p>$16</p>
+            <p class="description">The lorem text the section that contains header with having open functionality.
+              Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card ">
+
+        <div class="image-content">
+          <span class="overlay"></span>
+
+          <div class="card-image">
+            <img src="men(slimfitpant).jpg" alt="" class="card-img">
+        </div>
+    </div>
+
+    <div class="card-content">
+        <h2 class="name">slimfitpant</h2>
+        <p>$22</p>
+          <p class="description">The lorem text the section that contains header with having open functionality.
+            Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+          <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card ">
+
+      <div class="image-content">
+        <span class="overlay"></span>
+
+        <div class="card-image">
+          <img src="men(twill pant).jpeg" alt="" class="card-img">
+      </div>
+  </div>
+
+  <div class="card-content">
+      <h2 class="name">twillpant</h2>
+      <p>$26</p>
+        <p class="description">The lorem text the section that contains header with having open functionality.
+          Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+        <button class="button"> <i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div id="footer"> </div>
+</body>
+
+</html>
